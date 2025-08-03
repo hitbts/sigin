@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Dados CNPJ 32.758.438/0001‑20</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    button { margin: 5px; padding: 8px 16px; cursor: pointer; }
+    .info { margin-top: 20px; padding: 15px; border: 1px solid #ccc; }
+    h2 { margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+  <h1>Empresa: CNPJ 32.758.438/0001‑20</h1>
+  <div>
+    <button onclick="show('geral')">Visão Geral</button>
+    <button onclick="show('localizacao')">Localização</button>
+    <button onclick="show('atividades')">Atividades Econômicas</button>
+    <button onclick="show('socios')">Sócios e Administradores</button>
+    <button onclick="show('contato')">Contato</button>
+  </div>
+
+  <div id="info" class="info">Clique em um botão acima para ver os detalhes.</div>
+
+  <script>
+    const data = {
+      geral: `
+        <h2>Visão Geral</h2>
+        <p><strong>Razão Social:</strong> MERCADO E ACOUGUE PIMENTEL LTDA</p>
+        <p><strong>CNPJ:</strong> 32.758.438/0001‑20</p>
+        <p><strong>Natureza Jurídica:</strong> 2062 – Sociedade Empresária Limitada</p>
+        <p><strong>Situação Cadastral:</strong> ATIVA (desde 13/02/2019)</p>
+        <p><strong>Capital Social:</strong> R$ 5.000,00</p>
+        <p><strong>Porte (RFB):</strong> Empresa de Pequeno Porte</p>
+        <p><strong>Data de Abertura:</strong> 13/02/2019 (há ~6 anos e 5 meses)</p>
+      `,
+      localizacao: `
+        <h2>Localização</h2>
+        <p>Rua Arthur Ropelato, 315<br>
+        Bairro Santa Luzia<br>
+        Jaraguá do Sul – SC<br>
+        CEP: 89267‑010</p>
+      `,
+      atividades: `
+        <h2>Atividades Econômicas (CNAE)</h2>
+        <ul>
+          <li>47.12‑1/00 – Comércio varejista de mercadorias em geral, com predominância de alimentos (minimercados, mercearias)</li>
+          <li>47.21‑1/02 – Padaria e confeitaria com predominância de revenda</li>
+          <li>47.22‑9/01 – Comércio varejista de carnes – açougues</li>
+        </ul>
+      `,
+      socios: `
+        <h2>Sócios e Administradores (QSA)</h2>
+        <ul>
+          <li>Evandra Gonçalves de Araujo – Sócio‑Administrador (entrada 20/06/2023)</li>
+        </ul>
+      `,
+      contato: `
+        <h2>Contato</h2>
+        <p><strong>Telefone:</strong> (47) 9759‑2859</p>
+        <p><strong>E‑mail:</strong> [não divulgado publicamente]</p>
+      `
+    };
+
+    function show(section) {
+      document.getElementById('info').innerHTML = data[section] || '<p>Sem dados para esta seção.</p>';
+    }
+  </script>
+</body>
+</html>
